@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+    </script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet" />
     <title>Document</title>
 </head>
@@ -16,32 +19,168 @@
         <div class="heading">
             <h2><strong>Musical Strings</strong></h2>
         </div>
-        <div class="visit">
-            <button>
-                <a href="#">Visit Full Playlist</a>
+        <div class="visit_playlist">
+            <button  class="visit_playlist_text" onclick="window.open('https://youtube.com/playlist?list=PLDd1K6tZp8yAI2xBxNxvBv4G9E-DEvgm5' )" >
+                Visit Full Playlist
             </button>
         </div>
     </nav>
     </header>
-    <div class="cards">
-        <div class="butter_img">
-            <img src="images/butter_2.png" alt="butterBTS" />
+    <main class="container">
+    <section class="cards">
+        <!--Butter Song-->
+        <div class="card">
+        <div class="first_img">
+            <img src="images/butter_2.png" class="first_img" alt="butterBTS" />
         </div>
-        <h3>Butter</h3>
+        <div class="song_heading">
+        <h3 >Butter</h3>
+        </div>
+        <div class="song_text">
         <p class=""> 
             <ul>
                 <li>Song Composer: BTS</li>
-                <li>Year of Release:2021</li>
-                <li>Listen to this song:
-                    <audio controls><source src="songs/Butter-BTS.mp3" /></audio>
-                </li>
-
+                <li>Year of Release: 2021</li>
+                <li>Listen to this song:</li><br />                
+                        
             </ul>
-        </p>
-        <div>
-            <button><a href="https://youtu.be/WMweEpGlu_U">Watch Music Video</a></button>
+            </p>
         </div>
-    </div>
+        <div>
+            <audio controls class="song_audio"><source src="songs/Butter-BTS.mp3" /></audio>
+            </div><br />
+        <div class="button_container">
+            <button  class="song_button" onclick="window.open('https://youtu.be/WMweEpGlu_U')">Watch Music Video</button>
+        </div>
+        </div>
+        <!--Deja Vu Song-->
+        <div class="card">
+            <div class="first_img">
+                <img src="images/deja vu 2.jpg" class="first_img" alt="deja vu" />
+            </div>
+            <div class="song_heading">
+            <h3 >deja vu</h3>
+            </div>
+            <div class="song_text">
+            <p class=""> 
+                <ul>
+                    <li>Song Composer: Olivia Rodrigo</li>
+                    <li>Year of Release: 2021</li>
+                    <li>Listen to this song:</li><br />                
+                            
+                </ul>
+                </p>
+            </div>
+            <div>
+                <audio controls class="song_audio"><source src="songs/deja vu.mp3" /></audio>
+                </div><br />
+            <div class="button_container">
+                <button  class="song_button" onclick="window.open('https://youtu.be/cii6ruuycQA')">Watch Music Video</button>
+            </div>
+            </div>
+        <!--Weekend Vibe Song-->
+        <div class="card">
+            <div class="first_img">
+                <img src="images/weekend vibe 2.jpg" class="first_img" alt="weekend vibe" />
+            </div>
+            <div class="song_heading">
+            <h3 >Weekend Vibe</h3>
+            </div>
+            <div class="song_text">
+            <p class=""> 
+                <ul>
+                    <li>Song Composer: Jubël</li>
+                    <li>Year of Release: 2021</li>
+                    <li>Listen to this song:</li><br />                
+                            
+                </ul>
+                </p>
+            </div>
+            <div>
+                <audio controls class="song_audio"><source src="songs/Weekend Vibe-Jubel.mp3" /></audio>
+                </div><br />
+            <div class="button_container">
+                <button  class="song_button" onclick="window.open('https://youtu.be/9dSha9wzenM')">Watch Music Video</button>
+            </div>
+            </div>
+            <!--We dont talk anymore-->
+            <div class="card">
+                <div class="first_img">
+                    <img src="images/we dont talk anymore 2.jpg" class="first_img" alt="we dont talk anymore" />
+                </div>
+                <div class="song_heading">
+                <h3 >We Don't Talk Anymore</h3>
+                </div>
+                <div class="song_text">
+                <p class=""> 
+                    <ul>
+                        <li>Song Composer: Charlie Puth</li>
+                        <li>Year of Release: 2021</li>
+                        <li>Listen to this song:</li><br />                
+                                
+                    </ul>
+                    </p>
+                </div>
+                <div>
+                    <audio controls class="song_audio"><source src="songs/Charlie Puth - We Don't Talk Anymore (feat. Selena Gomez) (Audio).mp3" /></audio>
+                    </div><br />
+                <div class="button_container">
+                    <button  class="song_button" onclick="window.open('https://youtu.be/3AtDnEC4zak')">Watch Music Video</button>
+                </div>
+                </div>
+            <!--Levitating Song-->
+                <div class="card">
+                    <div class="first_img">
+                        <img src="images/levitating 2.jpg" class="first_img" alt="levitating" />
+                    </div>
+                    <div class="song_heading">
+                    <h3 >Levitating</h3>
+                    </div>
+                    <div class="song_text">
+                    <p class=""> 
+                        <ul>
+                            <li>Song Composer: Dua Lipa</li>
+                            <li>Year of Release: 2021</li>
+                            <li>Listen to this song:</li><br />                
+                                    
+                        </ul>
+                        </p>
+                    </div>
+                    <div>
+                        <audio controls class="song_audio"><source src="songs/Levitating-Dua Lipa.mp3" /></audio>
+                        </div><br />
+                    <div class="button_container">
+                        <button  class="song_button" onclick="window.open('https://youtu.be/TUVcZfQe-Kw')">Watch Music Video</button>
+                    </div>
+                    </div>
+            <!--On my way song-->
+            <div class="card">
+                <div class="first_img">
+                    <img src="images/on my way.jpg" class="first_img" alt="on my way" />
+                </div>
+                <div class="song_heading">
+                <h3 >On My Way</h3>
+                </div>
+                <div class="song_text">
+                <p class=""> 
+                    <ul>
+                        <li>Song Composer: Alan Walker ft. Sabrina Carpenter</li>
+                        <li>Year of Release: 2021</li>
+                        <li>Listen to this song:</li><br />                
+                                
+                    </ul>
+                    </p>
+                </div>
+                <div>
+                    <audio controls class="song_audio"><source src="songs/On My Way -Alan Walker, Sabrina Carpenter & Farruko.mp3" /></audio>
+                    </div><br />
+                <div class="button_container">
+                    <button  class="song_button" onclick="window.open('https://youtu.be/dhYOPzcsbGM')">Watch Music Video</button>
+                </div>
+                </div>
+        
+    </section>
+    </main>
 
 
     
