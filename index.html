@@ -5,11 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
+        document.addEventListener('play', function(e){
+var audios = document.getElementsByTagName('audio');
+for(var i = 0, len = audios.length; i < len;i++){
+    if(audios[i] != e.target){
+        audios[i].pause();
+    }
+}
+}, true);
     </script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Lora&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet" />
     <title>Document</title>
 </head>
@@ -20,14 +29,19 @@
             <h2><strong>Musical Strings</strong></h2>
         </div>
         <div class="visit_playlist">
-            <button  class="visit_playlist_text" onclick="window.open('https://youtube.com/playlist?list=PLDd1K6tZp8yAI2xBxNxvBv4G9E-DEvgm5' )" >
+            <button  class="visit_playlist_text" onclick="window.open('https://youtube.com/playlist?list=PLDd1K6tZp8yBPCYLNrsqkb6DvGrusvZUF')" >
                 Visit Full Playlist
             </button>
         </div>
     </nav>
     </header>
     <main class="container">
+        <!--English Songs Section-->
+        <div class="english_heading">
+            <h1 class="english_text">English Tracks</h1>
+            </div>
     <section class="cards">
+        
         <!--Butter Song-->
         <div class="card">
         <div class="first_img">
@@ -39,15 +53,15 @@
         <div class="song_text">
         <p class=""> 
             <ul>
-                <li>Song Composer: BTS</li>
+                <li>Artist(s): BTS</li>
                 <li>Year of Release: 2021</li>
                 <li>Listen to this song:</li><br />                
                         
             </ul>
             </p>
         </div>
-        <div>
-            <audio controls class="song_audio"><source src="songs/Butter-BTS.mp3" /></audio>
+        <div class="song">
+            <audio controls class="song_audio" ><source src="songs/Butter-BTS.mp3" /></audio>
             </div><br />
         <div class="button_container">
             <button  class="song_button" onclick="window.open('https://youtu.be/WMweEpGlu_U')">Watch Music Video</button>
@@ -64,15 +78,15 @@
             <div class="song_text">
             <p class=""> 
                 <ul>
-                    <li>Song Composer: Olivia Rodrigo</li>
+                    <li>Artist(s): Olivia Rodrigo</li>
                     <li>Year of Release: 2021</li>
                     <li>Listen to this song:</li><br />                
                             
                 </ul>
                 </p>
             </div>
-            <div>
-                <audio controls class="song_audio"><source src="songs/deja vu.mp3" /></audio>
+            <div class="song">
+                <audio controls class="song_audio playlist"><source src="songs/deja vu.mp3" /></audio>
                 </div><br />
             <div class="button_container">
                 <button  class="song_button" onclick="window.open('https://youtu.be/cii6ruuycQA')">Watch Music Video</button>
@@ -89,14 +103,14 @@
             <div class="song_text">
             <p class=""> 
                 <ul>
-                    <li>Song Composer: Jubël</li>
+                    <li>Artist(s): Jubël</li>
                     <li>Year of Release: 2021</li>
                     <li>Listen to this song:</li><br />                
                             
                 </ul>
                 </p>
             </div>
-            <div>
+            <div class="song">
                 <audio controls class="song_audio"><source src="songs/Weekend Vibe-Jubel.mp3" /></audio>
                 </div><br />
             <div class="button_container">
@@ -114,14 +128,14 @@
                 <div class="song_text">
                 <p class=""> 
                     <ul>
-                        <li>Song Composer: Charlie Puth</li>
-                        <li>Year of Release: 2021</li>
+                        <li>Artist(s): Charlie Puth</li>
+                        <li>Year of Release: 2016</li>
                         <li>Listen to this song:</li><br />                
                                 
                     </ul>
                     </p>
                 </div>
-                <div>
+                <div class="song">
                     <audio controls class="song_audio"><source src="songs/Charlie Puth - We Don't Talk Anymore (feat. Selena Gomez) (Audio).mp3" /></audio>
                     </div><br />
                 <div class="button_container">
@@ -139,14 +153,14 @@
                     <div class="song_text">
                     <p class=""> 
                         <ul>
-                            <li>Song Composer: Dua Lipa</li>
-                            <li>Year of Release: 2021</li>
+                            <li>Artist(s): Dua Lipa ft. DaBaby</li>
+                            <li>Year of Release: 2020</li>
                             <li>Listen to this song:</li><br />                
                                     
                         </ul>
                         </p>
                     </div>
-                    <div>
+                    <div class="song">
                         <audio controls class="song_audio"><source src="songs/Levitating-Dua Lipa.mp3" /></audio>
                         </div><br />
                     <div class="button_container">
@@ -164,22 +178,499 @@
                 <div class="song_text">
                 <p class=""> 
                     <ul>
-                        <li>Song Composer: Alan Walker ft. Sabrina Carpenter</li>
-                        <li>Year of Release: 2021</li>
+                        <li>Artist(s): Alan Walker ft. Sabrina Carpenter</li>
+                        <li>Year of Release: 2019</li>
                         <li>Listen to this song:</li><br />                
                                 
                     </ul>
                     </p>
                 </div>
-                <div>
+                <div class="song">
                     <audio controls class="song_audio"><source src="songs/On My Way -Alan Walker, Sabrina Carpenter & Farruko.mp3" /></audio>
                     </div><br />
                 <div class="button_container">
                     <button  class="song_button" onclick="window.open('https://youtu.be/dhYOPzcsbGM')">Watch Music Video</button>
                 </div>
                 </div>
+            <!--Save Your Tears-->
+            <div class="card">
+                <div class="first_img">
+                    <img src="images/save your tears.png" class="first_img" alt="save your tears" />
+                </div>
+                <div class="song_heading">
+                <h3 >Save Your Tears (Remix)</h3>
+                </div>
+                <div class="song_text">
+                <p class=""> 
+                    <ul>
+                        <li>Artist(s): The Weeknd ft. Ariana Grande </li>
+                        <li>Year of Release: 2021</li>
+                        <li>Listen to this song:</li><br />                
+                                
+                    </ul>
+                    </p>
+                </div>
+                <div class="song">
+                    <audio controls class="song_audio"><source src="songs/The Weekend & Ariana Grande - Save Your Tears (Remix) (Audio).mp3" /></audio>
+                    </div><br />
+                <div class="button_container">
+                    <button  class="song_button" onclick="window.open('https://youtu.be/LIIDh-qI9oI')">Watch Music Video</button>
+                </div>
+                </div>
+
+                <!--Peaches-->
+                <div class="card">
+                    <div class="first_img">
+                        <img src="images/peaches.jpg" class="first_img" alt="peaches" />
+                    </div>
+                    <div class="song_heading">
+                    <h3 >Peaches</h3>
+                    </div>
+                    <div class="song_text">
+                    <p class=""> 
+                        <ul>
+                            <li>Artist(s): Justin Bieber ft. Daniel Caesar, Giveon</li>
+                            <li>Year of Release: 2021</li>
+                            <li>Listen to this song:</li><br />                
+                                    
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="song">
+                        <audio controls class="song_audio"><source src="songs/Justin Bieber - Peaches ft. Daniel Caesar, Giveon (Lyric Video).mp3" /></audio>
+                        </div><br />
+                    <div class="button_container">
+                        <button  class="song_button" onclick="window.open('https://youtu.be/tQ0yjYUFKAE')">Watch Music Video</button>
+                    </div>
+                    </div>
+
+                <!--Savage Love-->
+                <div class="card">
+                    <div class="first_img">
+                        <img src="images/savage love.jpg" class="first_img" alt="save love" />
+                    </div>
+                    <div class="song_heading">
+                    <h3>Savage Love</h3>
+                    </div>
+                    <div class="song_text">
+                    <p class=""> 
+                        <ul>
+                            <li>Artist(s): Jason Derulo, BTS, Jawsh 685</li>
+                            <li>Year of Release: 2020</li>
+                            <li>Listen to this song:</li><br />                
+                                    
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="song">
+                        <audio controls class="song_audio"><source src="songs/BTS (방탄소년단) 'Savage Love' (Laxed Siren Beat) [BTS Remix] Lyric Video.mp3" /></audio>
+                        </div><br />
+                    <div class="button_container">
+                        <button  class="song_button" onclick="window.open('https://youtu.be/qvu4nPMyl3U')">Watch Music Video</button>
+                    </div>
+                    </div>
+
+                <!--Senorita-->
+                <div class="card">
+                    <div class="first_img">
+                        <img src="images/senorita.jpg" class="first_img" alt="senorita" />
+                    </div>
+                    <div class="song_heading">
+                    <h3 >Senorita</h3>
+                    </div>
+                    <div class="song_text">
+                    <p class=""> 
+                        <ul>
+                            <li>Artist(s): Shawn Mendes & Camila Cabello</li>
+                            <li>Year of Release: 2019</li>
+                            <li>Listen to this song:</li><br />                
+                                    
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="song">
+                        <audio controls class="song_audio"><source src="songs/Shawn Mendes, Camila Cabello - Señorita (Lyrics).mp3" /></audio>
+                        </div><br />
+                    <div class="button_container">
+                        <button  class="song_button" onclick="window.open('https://youtu.be/Pkh8UtuejGw')">Watch Music Video</button>
+                    </div>
+                    </div>
+                
+                <!--Closer-->
+                <div class="card">
+                    <div class="first_img">
+                        <img src="images/closer.jpeg" class="first_img" alt="closer" />
+                    </div>
+                    <div class="song_heading">
+                    <h3 >Closer</h3>
+                    </div>
+                    <div class="song_text">
+                    <p class=""> 
+                        <ul>
+                            <li>Artist(s): The Chainsmokers ft. Halsey</li>
+                            <li>Year of Release: 2016</li>
+                            <li>Listen to this song:</li><br />                
+                                    
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="song">
+                        <audio controls class="song_audio"><source src="songs/The Chainsmokers - Closer (Lyrics) ft. Halsey.mp3" /></audio>
+                        </div><br />
+                    <div class="button_container">
+                        <button  class="song_button" onclick="window.open('https://youtu.be/PT2_F-1esPk')">Watch Music Video</button>
+                    </div>
+                    </div>
+
+                <!--Cheap Thrills-->
+                <div class="card">
+                    <div class="first_img">
+                        <img src="images/cheap thrills.png" class="first_img" alt="cheap thrills" />
+                    </div>
+                    <div class="song_heading">
+                    <h3 >Cheap Thrills</h3>
+                    </div>
+                    <div class="song_text">
+                    <p class=""> 
+                        <ul>
+                            <li>Artist(s): Sia Furler ft. Sean Paul</li>
+                            <li>Year of Release: 2016</li>
+                            <li>Listen to this song:</li><br />                
+                                    
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="song">
+                        <audio controls class="song_audio"><source src="songs/Sia - Cheap Thrills (Audio).mp3" /></audio>
+                        </div><br />
+                    <div class="button_container">
+                        <button  class="song_button" onclick="window.open('https://youtu.be/nYh-n7EOtMA')">Watch Music Video</button>
+                    </div>
+                    </div>
+
         
     </section>
+
+    <!--Hindi Songs section-->
+    <div class="hindi_heading">
+        <h1 class="hindi_text">Hindi Tracks</h1>
+        </div>
+    <section class="cards">
+        <!--Khairiyat-->
+        <div class="card">
+            <div class="first_img">
+                <img src="images/khairiyat.jpg" class="first_img" alt="khairiyat" />
+            </div>
+            <div class="song_heading">
+            <h3 >Khairiyat</h3>
+            </div>
+            <div class="song_text">
+            <p class=""> 
+                <ul>
+                    <li>Artist(s): Arijit Singh</li>
+                    <li>Year of Release: 2019</li>
+                    <li>Listen to this song:</li><br />                
+                            
+                </ul>
+                </p>
+            </div>
+            <div class="song">
+                <audio controls class="song_audio"><source src="songs/Khairiyat- Arijit, Pritam.mp3" /></audio>
+                </div><br />
+            <div class="button_container">
+                <button  class="song_button" onclick="window.open('https://youtu.be/hoNb6HuNmU0')">Watch Music Video</button>
+            </div>
+            </div>
+
+        <!--Banjaara-ek villain-->
+        <div class="card">
+            <div class="first_img">
+                <img src="images/banjaara.jpg" class="first_img" alt="banjaara" />
+            </div>
+            <div class="song_heading">
+            <h3 >Banjaara</h3>
+            </div>
+            <div class="song_text">
+            <p class=""> 
+                <ul>
+                    <li>Artist(s): Mohammed Irfan</li>
+                    <li>Year of Release: 2014</li>
+                    <li>Listen to this song:</li><br />                
+                            
+                </ul>
+                </p>
+            </div>
+            <div class="song">
+                <audio controls class="song_audio"><source src="songs/Banjaara(Ek Villain).mp3" /></audio>
+                </div><br />
+            <div class="button_container">
+                <button  class="song_button" onclick="window.open('https://youtu.be/0NFxcNheoLc')">Watch Music Video</button>
+            </div>
+            </div>
+
+        <!--Shayad-->
+        <div class="card">
+            <div class="first_img">
+                <img src="images/shayad.jpg" class="first_img" alt="shayad" />
+            </div>
+            <div class="song_heading">
+            <h3 >Shayad</h3>
+            </div>
+            <div class="song_text">
+            <p class=""> 
+                <ul>
+                    <li>Artist(s): Arijit Singh</li>
+                    <li>Year of Release: 2019</li>
+                    <li>Listen to this song:</li><br />                
+                            
+                </ul>
+                </p>
+            </div>
+            <div class="song">
+                <audio controls class="song_audio"><source src="songs/Shayad- Pritam, Darshan Raval.mp3" /></audio>
+                </div><br />
+            <div class="button_container">
+                <button  class="song_button" onclick="window.open('https://youtu.be/MJyKN-8UncM')">Watch Music Video</button>
+            </div>
+            </div>
+
+        <!--Kalank Title Track-->
+        <div class="card">
+            <div class="first_img">
+                <img src="images/kalank title track 2.jpg" class="first_img" alt="kalank" />
+            </div>
+            <div class="song_heading">
+            <h3 >Kalank Title Track</h3>
+            </div>
+            <div class="song_text">
+            <p class=""> 
+                <ul>
+                    <li>Artist(s): Arijit Singh</li>
+                    <li>Year of Release: 2019</li>
+                    <li>Listen to this song:</li><br />                
+                            
+                </ul>
+                </p>
+            </div>
+            <div class="song">
+                <audio controls class="song_audio"><source src="songs/Kalank Title Track - Arijit Singh Pritam Amitabh.mp3" /></audio>
+                </div><br />
+            <div class="button_container">
+                <button  class="song_button" onclick="window.open('https://youtu.be/b4hrUSBP4nc')">Watch Music Video</button>
+            </div>
+            </div>
+
+        <!--Udd Gaye-->
+        <div class="card">
+            <div class="first_img">
+                <img src="images/udd gaye 2.jpg" class="first_img" alt="udd gaye" />
+            </div>
+            <div class="song_heading">
+            <h3 >Udd Gaye</h3>
+            </div>
+            <div class="song_text">
+            <p class=""> 
+                <ul>
+                    <li>Artist(s): Ritviz</li>
+                    <li>Year of Release: 2017</li>
+                    <li>Listen to this song:</li><br />                
+                            
+                </ul>
+                </p>
+            </div>
+            <div class="song">
+                <audio controls class="song_audio"><source src="songs/Ritviz - Udd Gaye [Official Audio].mp3" /></audio>
+                </div><br />
+            <div class="button_container">
+                <button  class="song_button" onclick="window.open('https://youtu.be/0gosur3db5I')">Watch Music Video</button>
+            </div>
+            </div>
+
+        <!--Aabaad Barbaad-->
+        <div class="card">
+            <div class="first_img">
+                <img src="images/aabaad barbaad 2.jpg" class="first_img" alt="aabaad barbaad" />
+            </div>
+            <div class="song_heading">
+            <h3 >Aabaad Barbaad</h3>
+            </div>
+            <div class="song_text">
+            <p class=""> 
+                <ul>
+                    <li>Artist(s): Arijit Singh</li>
+                    <li>Year of Release: 2020</li>
+                    <li>Listen to this song:</li><br />                
+                            
+                </ul>
+                </p>
+            </div>
+            <div class="song">
+                <audio controls class="song_audio"><source src="songs/Aabaad Barbaad-Arijit, Pritam.mp3" /></audio>
+                </div><br />
+            <div class="button_container">
+                <button  class="song_button" onclick="window.open('https://youtu.be/jh66Pjtqr4k')">Watch Music Video</button>
+            </div>
+            </div>
+
+        <!--Sajda-->
+        <div class="card">
+            <div class="first_img">
+                <img src="images/sajda.jpg" class="first_img" alt="sajda" />
+            </div>
+            <div class="song_heading">
+            <h3 >Sajda</h3>
+            </div>
+            <div class="song_text">
+            <p class=""> 
+                <ul>
+                    <li>Artist(s): Richa Sharma, Rahat Fateh Ali Khan, Shankar Mahadevan</li>
+                    <li>Year of Release: 2010</li>
+                    <li>Listen to this song:</li><br />                
+                            
+                </ul>
+                </p>
+            </div>
+            <div class="song">
+                <audio controls class="song_audio"><source src="songs/Sajdaa Best Song - My Name is KhanShah Rukh KhanKajolRahat Fateh AliRicha Sharma.mp3" /></audio>
+                </div><br />
+            <div class="button_container">
+                <button  class="song_button" onclick="window.open('https://youtu.be/3rPEWcY6Oww')">Watch Music Video</button>
+            </div>
+            </div>
+
+        <!--Nazm Nazm-->
+        <div class="card">
+            <div class="first_img">
+                <img src="images/nazm nazm.jpg" class="first_img" alt="nazm nazm" />
+            </div>
+            <div class="song_heading">
+            <h3 >Nazm Nazm</h3>
+            </div>
+            <div class="song_text">
+            <p class=""> 
+                <ul>
+                    <li>Artist(s): Arko Pravo Mukherjee</li>
+                    <li>Year of Release: 2017</li>
+                    <li>Listen to this song:</li><br />                
+                            
+                </ul>
+                </p>
+            </div>
+            <div class="song">
+                <audio controls class="song_audio"><source src="songs/Nazm Nazm - Full AudioBareilly Ki BarfiKriti Sanon, Ayushmann Khurrana & Rajkummar RaoArko.mp3" /></audio>
+                </div><br />
+            <div class="button_container">
+                <button  class="song_button" onclick="window.open('https://youtu.be/RFx4g4GunYw')">Watch Music Video</button>
+            </div>
+            </div>
+
+        <!--Duniyaa-->
+        <div class="card">
+            <div class="first_img">
+                <img src="images/duniya.jpg" class="first_img" alt="duniya" />
+            </div>
+            <div class="song_heading">
+            <h3 >Duniyaa</h3>
+            </div>
+            <div class="song_text">
+            <p class=""> 
+                <ul>
+                    <li>Artist(s): Akhil & Dhvani Bhanushali</li>
+                    <li>Year of Release: 2019</li>
+                    <li>Listen to this song:</li><br />                
+                            
+                </ul>
+                </p>
+            </div>
+            <div class="song">
+                <audio controls class="song_audio"><source src="songs/Full Song Duniyaa Luka Chuppi Kartik Aaryan Kriti Sanon Akhil Dhvani B Abhijit V Kunaa.mp3" /></audio>
+                </div><br />
+            <div class="button_container">
+                <button  class="song_button" onclick="window.open('https://youtu.be/hVCYwwFwGEE')">Watch Music Video</button>
+            </div>
+            </div>
+
+        <!--Rehne Do Na-->
+        <div class="card">
+            <div class="first_img">
+                <img src="images/rehne do na.jpg" class="first_img" alt="rehne do na" />
+            </div>
+            <div class="song_heading">
+            <h3 >Rehne Do Na</h3>
+            </div>
+            <div class="song_text">
+            <p class=""> 
+                <ul>
+                    <li>Artist(s): Ankur Tewari</li>
+                    <li>Year of Release: 2020</li>
+                    <li>Listen to this song:</li><br />                
+                            
+                </ul>
+                </p>
+            </div>
+            <div class="song">
+                <audio controls class="song_audio"><source src="songs/Rehne Do Na - Official Music VideoGuiltyKiara Advani, Akansha Ranjan, GurfatehAnkur Tewari.mp3" /></audio>
+                </div><br />
+            <div class="button_container">
+                <button  class="song_button" onclick="window.open('https://youtu.be/uHV3gX-QTKU')">Watch Music Video</button>
+            </div>
+            </div>
+
+        <!--Kabira-->
+        <div class="card">
+            <div class="first_img">
+                <img src="images/kabira.jpg" class="first_img" alt="kabira" />
+            </div>
+            <div class="song_heading">
+            <h3 >Kabira</h3>
+            </div>
+            <div class="song_text">
+            <p class=""> 
+                <ul>
+                    <li>Artist(s): Tochi Raina & Rekha Bhardwaj</li>
+                    <li>Year of Release: 2013</li>
+                    <li>Listen to this song:</li><br />                
+                            
+                </ul>
+                </p>
+            </div>
+            <div class="song">
+                <audio controls class="song_audio"><source src="songs/Lyrical KabiraYeh Jawaani Hai DeewaniRanbir Kapoor, Deepika PadukonePritam.mp3" /></audio>
+                </div><br />
+            <div class="button_container">
+                <button  class="song_button" onclick="window.open('https://youtu.be/jHNNMj5bNQw')">Watch Music Video</button>
+            </div>
+            </div>
+
+        <!--Main Tumhara-->
+        <div class="card">
+            <div class="first_img">
+                <img src="images/main tumhara.jpg" class="first_img" alt="main tumhara" />
+            </div>
+            <div class="song_heading">
+            <h3 >Main Tumhara</h3>
+            </div>
+            <div class="song_text">
+            <p class=""> 
+                <ul>
+                    <li>Artist(s): A. R. Rahman, Hriday Gattani & Jonita Gandhi</li>
+                    <li>Year of Release: 2020</li>
+                    <li>Listen to this song:</li><br />                
+                            
+                </ul>
+                </p>
+            </div>
+            <div class="song">
+                <audio controls class="song_audio"><source src="songs/Main Tumhara - Dil BecharaOfficial Lyric VideoSushant-SanjanaA.R. RahmanJonita-Hriday.mp3" /></audio>
+                </div><br />
+            <div class="button_container">
+                <button  class="song_button" onclick="window.open('https://youtu.be/8Q5d0P6x61k ')">Watch Music Video</button>
+            </div>
+            </div>
+
+    </section>
+
+
     </main>
 
 

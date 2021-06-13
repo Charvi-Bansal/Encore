@@ -10,14 +10,20 @@ body{
     background-color: #fff;
     font-family: 'Lora', serif;
     overflow-x: hidden;
+    
 }
-nav{
+.navbar{
     background-image:linear-gradient(
         to right,
         #43cea2 0%,
         
         #185a9d 100%
       );
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -31,6 +37,7 @@ nav{
     font-family: 'Hammersmith One', sans-serif;
     margin: 30px;
     width: 100%;
+    font-size: 15px;
 }
 .container{
     width: 100%;
@@ -56,6 +63,23 @@ nav{
     border: none;
 
 }
+.english_heading{
+    margin-top: 25px;
+    margin-bottom: 5px;
+    margin-left: 8px;
+}
+.hindi_heading{
+    margin-top: 25px;
+    margin-bottom: 5px;
+    margin-left: 8px;
+}
+.english_text{
+    font-family: "Merriweather", sans-serif;
+    margin-top: 100px;
+}
+.hindi_text{
+    font-family: "Merriweather", sans-serif;
+}
 
 
 .song_button{
@@ -65,7 +89,7 @@ nav{
         
         #00cdac 
       );
-    width: 150px;
+    width: 170px;
     height:50px;
     padding:10px;
     border-radius: 30px;
@@ -73,7 +97,7 @@ nav{
     align-items: center;
     border: none;
     font-family: 'Signika', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
 }
 .cards{
     display: flex;
@@ -98,12 +122,12 @@ nav{
 .first_img{
     display: flex;
     justify-content: center;
-    width:130px;
-    height:130px;
+    width:140px;
+    height:140px;
     border-radius: 5px;
 }
 .song_heading{
-    margin-top: 5px;
+    margin-top: 7px;
     margin-bottom: 20px;
     width: 100%;
     text-align: center;    
@@ -116,4 +140,76 @@ nav{
     background-color: #185a9d;
     border: 2px solid black;  
     border-radius: 25px;  
+    width: 270px;
+}
+
+@media(min-width:768px) {
+    .visit_playlist{
+        margin-right: -400px;
+    }
+    .navbar{
+        justify-content: space-around;
+    }
+    .cards{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 15px;
+        }
+    .card{
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        height: 500px;
+    }
+    .english_heading{
+        margin-left: 20px;
+    }
+    .hindi_heading{
+        margin-left: 20px;
+    }
+    .heading{
+        font-size: 18px;
+    }
+}
+@media(min-width:1020px){
+    .visit_playlist{
+        margin-left: 470px;
+    }
+    .card{
+        width: 300px;
+        display: flex;
+              
+    }
+    .cards{
+        margin-left: 8px;
+        margin-right: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+        justify-content: space-evenly;   
+}
+    .first_img{
+        height: 160px;
+        width: 160px;
+    }
+}
+@media(min-width:1400px){
+    .cards{
+        margin-left: 5px;
+    }
+    .english_heading{
+        margin-top: 30px;
+        margin-left: 40px;
+    }
+    .hindi_heading{
+        margin-top: 30px;
+        margin-left: 40px;
+    }
+    .visit_playlist{
+        margin-left: 610px;
+    }
+
 }
