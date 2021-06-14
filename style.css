@@ -166,16 +166,37 @@ body{
     padding-left: 20px;
     font-size: 20px;
 }
-.footer_github_logo{
-    width: 10px;
-    height: 10px;
-    margin-left: 270px;
+.footer_github_id{
+    width: 30px;
+    height: 30px;
+    margin-left: 250px;
     margin-bottom: 900px;
     position: absolute;
-    top: 35px;
+    top: 20px;
     left: -20px;
+    display: flex;
+    flex-direction: row;
 }
-   
+.footer_github_logo{
+    padding: 7px;
+}
+.github_name{
+    font-family: 'Hammersmith One', sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+.copyright_container{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    margin-left: 100px;
+    top: 75px;
+    left: 30px;
+
+}
+.copyright_text{
+    font-size: 11px;
+}
 @media(min-width:768px) {
     .visit_playlist{
         margin-right: -400px;
@@ -205,6 +226,16 @@ body{
     .heading{
         font-size: 18px;
     }
+    .footer_github_id{
+        left: 350px;
+    }
+    .copyright_container{
+        left: 420px;
+    }
+    .footer_heading{
+        margin-left: 25px;
+    }
+
 }
 @media(min-width:1020px){
     .visit_playlist{
@@ -222,10 +253,20 @@ body{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap; 
+        justify-content: space-evenly;
 }
     .first_img{
         height: 160px;
         width: 160px;
+    }
+    .footer_github_id{
+        left: 800px;
+    }
+    .copyright_container{
+        left: 880px;
+    }
+    .footer_heading{
+        margin-left: 45px;
     }
 }
 @media(min-width:1400px){
@@ -247,6 +288,15 @@ body{
     .footer_container{
         margin: 0;
         width: 100%;
+    }
+    .footer_github_id{
+        left: 950px;
+    }
+    .copyright_container{
+        left: 1030px;
+    }
+    .footer_heading{
+        margin-left: 45px;
     }
 
 }
